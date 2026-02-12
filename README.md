@@ -36,7 +36,7 @@ For the purpose of executing the data flow analysis I implemented the worklist a
 To run the program either provide an / edit the existing input.txt, or alternatively provide a path to the input file as a start parameter.
 
 ## Examples
-
+Notation: Sx: <a, b> denotes the station with id x, that unloads all cargo of type a, and then loads cargo of type b. 
 ```mermaid
 graph TD
     S1["S1: <0|1>"]
