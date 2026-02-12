@@ -4,17 +4,16 @@ One quickly realizes that simply enumerating all paths is not feasible, due to e
 Further, one notices that the problem statement sounds quite similar to liveness analysis.  
 Hence, my approach is to employ the same underlying tool: Data Flow Analysis.  
 It is clear that we face a FORWARD & MAY analysis situation.  
-If we define the different operations as follows, then the types of cargo possible to arrive at each station becomes the  
-`IN` set at fixpoint.
+If we define the different operations as follows, then the types of cargo possible to arrive at each station becomes the IN set at fixpoint.
 
 **Abstract domain:** Sets of Cargo types
 
-**Join:** Union (Since we performe MAY Analysis)  
+**Join:** Union
 **Bottom:** Empty set  
 **Top:** Set of all listed cargo types  
 **Equals:** Set $A$ and $B$ are equal iff. all its elements are contained in each other
 
-Let $n$ be a station, with $\text{cargo\_off}[n]$ the cargo that is unloaded, and $\text{cargo\_on}[n]$ the cargo loaded at $n$.  
+Let $n$ be a station, with $\text{cargo_off}[n]$ the cargo that is unloaded, and $\text{cargo_on}[n]$ the cargo loaded at $n$.  
 Then the dataflow analysis becomes:
 
 $$
@@ -28,7 +27,7 @@ $$
 where
 
 $$
-\text{GEN}[n] := \text{cargo\_on}[n]; \quad \text{KILL}[n] := \text{cargo\_off}[n].
+\text{GEN}[n] := \text{cargo_on}[n]; \quad \text{KILL}[n] := \text{cargo_off}[n].
 $$
 
 
