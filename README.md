@@ -30,6 +30,10 @@ $$
 \text{GEN}[n] := \text{load}[n]; \quad \text{KILL}[n] := \text{unload}[n].
 $$
 
+For the purpose of executing the data flow analysis I implemented the worklist algorithm in DataFlowSolver.kt
+## Usage
+
+To run the program either provide an / edit the existing input.txt, or alternatively provide a path to the input file as a start parameter.
 
 ## Examples
 
