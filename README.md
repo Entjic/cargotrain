@@ -13,7 +13,7 @@ If we define the different operations as follows, then the types of cargo possib
 **Top:** Set of all listed cargo types  
 **Equals:** Set $A$ and $B$ are equal iff. all its elements are contained in each other
 
-Let $n$ be a station, with $\text{cargo_off}[n]$ the cargo that is unloaded, and $\text{cargo_on}[n]$ the cargo loaded at $n$.  
+Let $n$ be a station, with $\text{unload}[n]$ the cargo that is unloaded, and $\text{load}[n]$ the cargo loaded at $n$.  
 Then the dataflow analysis becomes:
 
 $$
@@ -27,7 +27,7 @@ $$
 where
 
 $$
-\text{GEN}[n] := \text{cargo_on}[n]; \quad \text{KILL}[n] := \text{cargo_off}[n].
+\text{GEN}[n] := \text{load}[n]; \quad \text{KILL}[n] := \text{unload}[n].
 $$
 
 
